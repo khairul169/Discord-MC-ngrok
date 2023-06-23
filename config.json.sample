@@ -1,0 +1,14 @@
+{
+    "discord": {
+        "client_id": "",
+        "token": "",
+        "channel_id": "",
+        "message_id": "",
+        "message": "Minecraft 🌲"
+    },
+    "ngrok": {
+        "auth_token": "",
+        "proto": "tcp",
+        "port": 25565
+    }
+}
