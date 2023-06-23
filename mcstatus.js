@@ -6,13 +6,19 @@ const getMcStatus = async (hostname) => {
       "https://api.mcstatus.io/v2/status/java/" + hostname
     );
     const data = await resp.json();
-
-    console.log(data);
+    return data;
   } catch (err) {
     console.error(err);
   }
+  return { online: false };
 };
 
-getMcStatus("play.hypixel.net:25565");
+// (async () => {
+//   const status = await getMcStatus("0.tcp.ap.ngrok.io:16539");
+//   const { online, version, players, motd } = status;
+
+//   const playersOnline = `${players?.online || 0} / ${players?.max || 0}`;
+//   console.log(online, version?.name_clean, playersOnline, motd?.clean);
+// })();
 
 module.exports = { getMcStatus };
